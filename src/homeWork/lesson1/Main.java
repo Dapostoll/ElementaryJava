@@ -36,7 +36,7 @@ public class Main {
         catLinkedList.add(englishBulldog);
         catLinkedList.add(beagle);
         System.out.println(catLinkedList);
-
+//
 
     }
 }
