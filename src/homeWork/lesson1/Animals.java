@@ -1,9 +1,9 @@
 package homeWork.lesson1;
 
-public class Animal {
+public class Animals {
     private String breed;
 
-    public Animal(String breed) {
+    public Animals(String breed) {
         this.breed = breed;
     }
 

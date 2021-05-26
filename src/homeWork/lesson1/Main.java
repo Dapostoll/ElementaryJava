@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Animal objectsphinx = new Animal("Sphinx");
+        Animals objectsphinx = new Animals("Sphinx");
         Map<String, String> catLinkedHashMap = new LinkedHashMap<>();
         ArrayList dogArrayList = new ArrayList();
         LinkedList catLinkedList = new LinkedList();
@@ -24,7 +24,6 @@ public class Main {
         System.out.println(stack);
         stack.remove(1);
         System.out.println(stack);
-        System.out.println(hastable);
         hastable.put(1, 2);
         treeMap.putAll(hastable);
         System.out.println(treeMap);
