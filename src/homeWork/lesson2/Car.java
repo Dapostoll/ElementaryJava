@@ -1,9 +1,8 @@
 package homeWork.lesson2;
 
-import java.util.Arrays;
 import java.util.Comparator;
 
-public class Car implements Comparable  {
+public class Car implements Comparable<Car> {
     int wheels;
     int doors;
     String carBrand;
@@ -17,8 +16,6 @@ public class Car implements Comparable  {
         this.mileage = mileage;
         this.carType = carType;
     }
-
-
     @Override
     public String toString() {
         return "Car{" +
@@ -29,54 +26,33 @@ public class Car implements Comparable  {
                 ", carType='" + carType + '\'' +
                 '}';
     }
-
     @Override
-    public int compareTo(Object o) {
-        int tmp = this.mileage - ((Car)o).mileage;
+    public int compareTo(Car o) {
+        int tmp = this.mileage - (o).mileage;
         if (tmp == 0) {
-            return this.mileage - ((Car) o).mileage;
+            return this.mileage - (o).mileage;
         } else {
             return tmp;
         }
     }
-//    @Override
-//    public int compareTo(Object o) {
-//        int tmp = this.doors - ((Car)o).doors;
-//        if (tmp == 0) {
-//            return this.doors - ((Car) o).doors;
-//        } else {
-//            return tmp;
-//        }
-//    }
 }
-class ComparatorByDoors implements Comparator{
+class ComparatorByDoors implements Comparator {
     @Override
     public int compare(Object o1, Object o2) {
-        return ((Car) o1).doors - ((Car)o2).doors;
+        return ((Car) o1).doors - ((Car) o2).doors;
     }
 }
-class ComaratorByCarBrand implements Comparator{
+class ComaratorByCarBrand implements Comparator {
     @Override
     public int compare(Object o1, Object o2) {
-        return ((Car)o1).carBrand.compareTo(((Car) o2).carBrand);
+        return ((Car) o1).carBrand.compareTo(((Car) o2).carBrand);
     }
 }
-class ComparatoprByMileage implements Comparator{
+class ComparatoprByMileage implements Comparator {
     @Override
     public int compare(Object o1, Object o2) {
-        return ((Car)o1).mileage - ((Car)o2).mileage;
+        return ((Car) o1).mileage - ((Car) o2).mileage;
     }
-//class ComparableByDoors implements  Comparable <Car>{
-//    @Override
-//    public int compareTo(Car o) {
-//        int tmp = this.doors - ((Car)o).doors;
-//        if (tmp == 0) {
-//            return this.doors - ((Car) o).doors;
-//        } else {
-//            return tmp;
-//        }
-//    }
-//}
 }
 
 
