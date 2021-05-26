@@ -1,5 +1,7 @@
 package homeWork.lesson1;
+
 import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
         Animal objectsphinx = new Animal("Sphinx");
@@ -14,7 +16,8 @@ public class Main {
         iset.add(objectsphinx);
         Iterator itr = iset.iterator();
         while (itr.hasNext()) {
-            System.out.println(itr.next().toString()); }
+            System.out.println(itr.next().toString());
+        }
         stack.add(objectsphinx);
         stack.add("1234");
         stack.add(objectsphinx);
